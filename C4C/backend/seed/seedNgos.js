@@ -2750,7 +2750,248 @@ const ngosData = [
     website: "https://www.oxfam.org/en",
     verified: true,
   },
-
+  [
+  {
+    "name": "Pakistan Animal Welfare Society (PAWS)",
+    "sector": "animal welfare",
+    "description": "Animal rescue and advocacy organization.",
+    "location": "Pakistan",
+    "website": "https://pawspakistan.org/about",
+    "verified": true
+  },
+  {
+    "name": "Society for the Prevention of Cruelty to Animals (SPCA)",
+    "sector": "animal welfare",
+    "description": "Promotes humane treatment of animals and provides shelter.",
+    "location": "Pakistan",
+    "website": "https://personalloan.pk/category/animal-welfare-organizations-in-pakistan/",
+    "verified": true
+  },
+  {
+    "name": "Todd’s Welfare Society (TWS)",
+    "sector": "animal welfare",
+    "description": "Rescue and shelter for stray animals.",
+    "location": "Pakistan",
+    "website": "https://en.wikipedia.org/wiki/Todd%27s_Welfare_Society",
+    "verified": true
+  },
+  {
+    "name": "Pawsitive Pakistan",
+    "sector": "animal welfare",
+    "description": "Animal welfare awareness platform.",
+    "location": "Pakistan",
+    "website": "https://pawsitivepakistan.org",
+    "verified": true
+  },
+  {
+    "name": "Human Rights Welfare Society Pakistan – Animal Development",
+    "sector": "animal welfare",
+    "description": "Animal rights and education.",
+    "location": "Pakistan",
+    "website": "https://hrws.pk/animal-development/",
+    "verified": true
+  },
+  {
+    "name": "Friends of Animals Pakistan (FOAP)",
+    "sector": "animal welfare",
+    "description": "Animal advocacy and protection organization.",
+    "location": "Pakistan",
+    "website": "https://jobbuzz.pk/list-of-animal-welfare-organizations-in-pakistan/",
+    "verified": true
+  },
+  {
+    "name": "Animal Care Trust (ACT)",
+    "sector": "animal welfare",
+    "description": "Animal rescue and birth control programs.",
+    "location": "Pakistan",
+    "website": "https://jobbuzz.pk/list-of-animal-welfare-organizations-in-pakistan/",
+    "verified": true
+  },
+  {
+    "name": "Save Our Animal Rights (SOAR)",
+    "sector": "animal welfare",
+    "description": "Rescue, shelter, and care for animals.",
+    "location": "Pakistan",
+    "website": "https://jobbuzz.pk/list-of-animal-welfare-organizations-in-pakistan/",
+    "verified": true
+  },
+  {
+    "name": "Nature Foundation Pakistan (NFP)",
+    "sector": "animal welfare",
+    "description": "Animal care and rescue services.",
+    "location": "Pakistan",
+    "website": "https://jobbuzz.pk/list-of-animal-welfare-organizations-in-pakistan/",
+    "verified": true
+  },
+  {
+    "name": "Animal Aid Foundation (AAF)",
+    "sector": "animal welfare",
+    "description": "Spay/neuter and welfare programs.",
+    "location": "Pakistan",
+    "website": "https://jobbuzz.pk/list-of-animal-welfare-organizations-in-pakistan/",
+    "verified": true
+  },
+  {
+    "name": "Stray Animals Welfare Organization (SAWO)",
+    "sector": "animal welfare",
+    "description": "Support for stray animals in communities.",
+    "location": "Pakistan",
+    "website": "https://jobbuzz.pk/list-of-animal-welfare-organizations-in-pakistan/",
+    "verified": true
+  },
+  {
+    "name": "Rescuing Animals In Need (RAIN)",
+    "sector": "animal welfare",
+    "description": "Animal rescue and emergency care services.",
+    "location": "Pakistan",
+    "website": "https://jobbuzz.pk/list-of-animal-welfare-organizations-in-pakistan/",
+    "verified": true
+  },
+  {
+    "name": "Vets Care Organization (VCO)",
+    "sector": "animal welfare",
+    "description": "Veterinary support and rescue programs.",
+    "location": "Pakistan",
+    "website": "https://jobbuzz.pk/list-of-animal-welfare-organizations-in-pakistan/",
+    "verified": true
+  },
+  {
+    "name": "Karuna Animal Welfare Trust",
+    "sector": "animal welfare",
+    "description": "Animal rescue and long-term care programs.",
+    "location": "Pakistan",
+    "website": "https://jobbuzz.pk/list-of-animal-welfare-organizations-in-pakistan/",
+    "verified": true
+  },
+  {
+    "name": "Tahira Animal Welfare Foundation (TAWF)",
+    "sector": "animal welfare",
+    "description": "Shelter and rehabilitation services for animals.",
+    "location": "Pakistan",
+    "website": "https://tawf.org.pk/about",
+    "verified": true
+  },
+  {
+    "name": "Edhi Foundation",
+    "sector": "social welfare",
+    "description": "Comprehensive social services including hospitals, orphanages, and emergency aid.",
+    "location": "Pakistan",
+    "website": "https://en.wikipedia.org/wiki/Edhi_Foundation",
+    "verified": true
+  },
+  {
+    "name": "Saylani Welfare International Trust",
+    "sector": "social welfare",
+    "description": "Food distribution, health, and community aid programs.",
+    "location": "Pakistan",
+    "website": "https://en.wikipedia.org/wiki/Saylani_Welfare_Trust",
+    "verified": true
+  },
+  {
+    "name": "JDC Foundation Pakistan",
+    "sector": "social welfare",
+    "description": "Emergency services and community relief programs.",
+    "location": "Pakistan",
+    "website": "https://en.wikipedia.org/wiki/JDC_Foundation",
+    "verified": true
+  },
+  {
+    "name": "Alamgir Welfare Trust International",
+    "sector": "social welfare",
+    "description": "Social support and feeding programs for underprivileged communities.",
+    "location": "Pakistan",
+    "website": "https://en.wikipedia.org/wiki/Alamgir_Welfare_Trust",
+    "verified": true
+  },
+  {
+    "name": "Khidmat‑e‑Khalq Foundation (KKF)",
+    "sector": "social welfare",
+    "description": "Welfare hospitals, emergency aid, and community services.",
+    "location": "Pakistan",
+    "website": "https://en.wikipedia.org/wiki/Khidmat-e-Khalq_Foundation",
+    "verified": true
+  },
+  {
+    "name": "Akhuwat Foundation",
+    "sector": "social welfare",
+    "description": "Poverty alleviation and interest-free microloans.",
+    "location": "Pakistan",
+    "website": "https://alkhidmat.org/about-us/latest/blog/list-of-top-10-charitable-organizations-in-pakistan/",
+    "verified": true
+  },
+  {
+    "name": "Alkhidmat Foundation Pakistan",
+    "sector": "social welfare",
+    "description": "Emergency relief and community development programs.",
+    "location": "Pakistan",
+    "website": "https://alkhidmat.org/about-us/latest/blog/list-of-top-10-charitable-organizations-in-pakistan/",
+    "verified": true
+  },
+  {
+    "name": "HANDS (Health And Nutrition Development Society)",
+    "sector": "social welfare",
+    "description": "Health, education, and poverty support services.",
+    "location": "Pakistan",
+    "website": "https://hands.org.pk/non-profit-organization-in-pakistan-serving-the-underprivileged/",
+    "verified": true
+  },
+  {
+    "name": "Aman Foundation",
+    "sector": "social welfare",
+    "description": "Healthcare, education, and social development programs.",
+    "location": "Pakistan",
+    "website": "https://hands.org.pk/non-profit-organization-in-pakistan-serving-the-underprivileged/",
+    "verified": true
+  },
+  {
+    "name": "Kashf Foundation",
+    "sector": "social welfare",
+    "description": "Financial inclusion and women empowerment programs.",
+    "location": "Pakistan",
+    "website": "https://en.wikipedia.org/wiki/Kashf_Foundation",
+    "verified": true
+  },
+  {
+    "name": "Ansar Burney Trust",
+    "sector": "social welfare",
+    "description": "Human rights and social welfare initiatives.",
+    "location": "Pakistan",
+    "website": "https://jdcwelfare.org/top-ngos-in-pakistan/",
+    "verified": true
+  },
+  {
+    "name": "Dar‑ul‑Sukun",
+    "sector": "social welfare",
+    "description": "Support services for people with disabilities.",
+    "location": "Pakistan",
+    "website": "https://jdcwelfare.org/top-ngos-in-pakistan/",
+    "verified": true
+  },
+  {
+    "name": "Aurat Foundation",
+    "sector": "social welfare",
+    "description": "Women’s rights and empowerment programs.",
+    "location": "Pakistan",
+    "website": "https://jdcwelfare.org/top-ngos-in-pakistan/",
+    "verified": true
+  },
+  {
+    "name": "The Citizens Foundation",
+    "sector": "social welfare",
+    "description": "Education for underprivileged children across Pakistan.",
+    "location": "Pakistan",
+    "website": "https://en.wikipedia.org/wiki/List_of_non-governmental_organizations_in_Pakistan",
+    "verified": true
+  },
+  {
+    "name": "Himalayan Wildlife Foundation",
+    "sector": "social welfare",
+    "description": "Wildlife conservation and biodiversity programs.",
+    "location": "Pakistan",
+    "website": "https://en.wikipedia.org/wiki/Himalayan_Wildlife_Foundation",
+    "verified": true
+  }
+]
 
 
 ];

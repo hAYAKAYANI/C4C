@@ -13,7 +13,7 @@ const AuthCard = ({ title, subtitle, children }) => {
           xl:max-w-3xl
           rounded-3xl
           p-6 sm:p-8 md:p-10
-          bg-linear-to-br from-[#69306d] via-[#a66dd4] to-[#ffa69e]
+          bg-gradient-to-br from-[#69306d] via-[#a66dd4] to-[#ffa69e]
           shadow-2xl
         "
       >

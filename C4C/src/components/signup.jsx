@@ -40,7 +40,7 @@ const Signup = ({ isModal = false, switchTo, onClose }) => {
   };
 
   return (
-    <div className="p-6 sm:p-8 md:p-10 rounded-3xl bg-linear-to-br from-[#69306d] via-[#a66dd4] to-[#ffa69e] shadow-2xl w-full">
+<div className="p-6 sm:p-8 md:p-10 rounded-3xl bg-gradient-to-br from-[#69306d] via-[#a66dd4] to-[#ffa69e] shadow-2xl w-full">
       <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white text-center mb-2">
         Join Connect4Cause 💜
       </h2>

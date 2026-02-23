@@ -17,31 +17,5 @@ export default {
       },
     },
   },
-  animation: {
-  slide: "slide 20s linear infinite",
-},
-keyframes: {
-  slide: {
-    "0%": { transform: "translateX(0)" },
-    "100%": { transform: "translateX(-50%)" },
-  },
-},
-extend: {
-  animation: {
-    slide: "slide 20s linear infinite",
-  },
-  keyframes: {
-    slide: {
-      "0%": { transform: "translateX(0)" },
-      "100%": { transform: "translateX(-50%)" },
-    },
-  },
-  variants: {
-    extend: {
-      animation: ["hover", "group-hover"],
-    },
-  },
-},
-
   plugins: [],
-};
+}

@@ -6,7 +6,7 @@ const SectionHome = () => {
     <section
       className="
         w-full relative flex items-center justify-center shadow-lg
-       bg-linear-to-r from-[#be83a761] via-[#cbfff9] to-[#be83a761]
+        bg-gradient-to-r from-[#be83a761] via-[#cbfff9] to-[#be83a761]
         h-96 md:min-h-[calc(100vh-80px)]
       "
     >

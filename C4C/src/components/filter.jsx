@@ -46,7 +46,7 @@ const FilterComponent = ({ filters, setFilters }) => {
       </button>
 
       {isOpen && (
-        <div className="absolute top-full mt-2 bg-white shadow-lg rounded-lg p-3 w-64 flex flex-col space-y-3 z-10">
+        <div className="absolute top-full mt-2 bg-white shadow-lg rounded-lg p-2 w-48 flex flex-col space-y-3 z-10">
           <div>
             <label className="font-semibold text-gray-700">Sector</label>
             <select
