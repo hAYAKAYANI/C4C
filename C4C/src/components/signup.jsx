@@ -1,109 +1,85 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Button1 from "./Button1";
 import axios from "axios";
 
-const Signup = ({ isModal = false, switchTo }) => {
-  const [formData, setFormData] = useState({ name: "", email: "", password: "" });
-  const [user, setUser] = useState(null);
-
-  // Safe check for already registered/logged-in user
-  useEffect(() => {
-    const storedUser = localStorage.getItem("user");
-    if (storedUser) {
-      try {
-        setUser(JSON.parse(storedUser));
-      } catch {
-        setUser(null);
-      }
-    }
-  }, []);
+const Signup = ({ isModal = false, switchTo, onClose }) => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    password: "",
+  });
 
   const handleChange = (e) =>
     setFormData({ ...formData, [e.target.name]: e.target.value });
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
     try {
-      const res = await axios.post("http://localhost:5000/api/auth/register", formData);
+      const res = await axios.post(
+        "http://localhost:5000/api/auth/register",
+        formData
+      );
 
-      alert(res.data.msg);
-
-      // Store user info safely
       const userData = res.data.user;
+
       if (userData) {
+        // Save registered user
         localStorage.setItem("user", JSON.stringify(userData));
-        setUser(userData);
+        localStorage.setItem("sessionUser", JSON.stringify(userData));
+        localStorage.setItem("token", res.data.token);
       }
 
-      // Close modal if applicable
-      if (isModal && switchTo) switchTo(null);
+      alert(`Welcome ${userData.name} 💜`);
+
+      if (onClose) onClose();
+      if (switchTo) switchTo(null);
     } catch (err) {
       alert(err.response?.data?.msg || "Server error");
     }
   };
 
-  // If user already exists, show message instead of form
-  if (user) {
-    return (
-      <div className="p-6 sm:p-8 md:p-10 rounded-3xl bg-linear-to-br from-[#69306d] via-[#a66dd4] to-[#ffa69e] shadow-2xl w-full text-center text-white">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold mb-2">
-          Hey {user.name} 💜
-        </h2>
-        <p className="text-white/90 mb-4">
-          You already have an account registered with us!
-        </p>
-        {isModal && (
-          <Button1
-            text="Go to Login"
-            color="#69306d"
-            textColor="#fff"
-            onClick={() => switchTo("login")}
-          />
-        )}
-      </div>
-    );
-  }
-
-  // Otherwise show signup form
   return (
     <div className="p-6 sm:p-8 md:p-10 rounded-3xl bg-linear-to-br from-[#69306d] via-[#a66dd4] to-[#ffa69e] shadow-2xl w-full">
       <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white text-center mb-2">
         Join Connect4Cause 💜
       </h2>
-      <p className="text-white/90 text-center mb-6 sm:mb-8 text-sm sm:text-base">
-        Create your free account
-      </p>
 
       <input
         type="text"
         name="name"
         placeholder="Full Name"
-        className="w-full p-3 sm:p-4 rounded-xl mb-4 outline-none text-sm sm:text-base"
+        className="w-full p-3 rounded-xl mb-4 outline-none"
         onChange={handleChange}
       />
       <input
         type="email"
         name="email"
         placeholder="Email"
-        className="w-full p-3 sm:p-4 rounded-xl mb-4 outline-none text-sm sm:text-base"
+        className="w-full p-3 rounded-xl mb-4 outline-none"
         onChange={handleChange}
       />
       <input
         type="password"
         name="password"
         placeholder="Password"
-        className="w-full p-3 sm:p-4 rounded-xl mb-6 outline-none text-sm sm:text-base"
+        className="w-full p-3 rounded-xl mb-6 outline-none"
         onChange={handleChange}
       />
 
       <div className="flex flex-col gap-4 items-center">
-        <Button1 text="Sign Up" color="#69306d" textColor="#ffffff" onClick={handleSubmit} />
+        <Button1
+          text="Sign Up"
+          color="#69306d"
+          textColor="#ffffff"
+          onClick={handleSubmit}
+        />
 
         {isModal && (
           <>
             <p
               onClick={() => switchTo("login")}
-              className="text-white text-sm sm:text-base underline cursor-pointer"
+              className="text-white underline cursor-pointer"
             >
               Already have an account? Login
             </p>
@@ -112,7 +88,11 @@ const Signup = ({ isModal = false, switchTo }) => {
               text="Continue as Guest"
               color="#69306d"
               textColor="#fff"
-              onClick={() => switchTo("guest")}
+              onClick={() => {
+                localStorage.removeItem("sessionUser");
+                if (onClose) onClose();
+                switchTo(null);
+              }}
             />
           </>
         )}

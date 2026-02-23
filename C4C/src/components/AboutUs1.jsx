@@ -6,10 +6,11 @@ import climate from "../assets/climate.png";
 import disaster from "../assets/disaster.png";
 import social from "../assets/social.png";
 import health from "../assets/health.jpg";
-
+import BackButton from "./BackButton";
 const AboutUs1 = () => {
   return (
-    <div className="bg-[#f9f9f9] py-2 mt-4">
+    
+    <div className="bg-[#f9f9f9] py-2 ">
 
       {/* About Us Text */}
       <div className="px-2  text-center ">

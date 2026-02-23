@@ -22,11 +22,10 @@ const locations = [
   "Jhelum",
 ];
 
-const FilterComponent = ({ filters = { sector: "All", location: "All" }, setFilters }) => {
+const FilterComponent = ({ filters, setFilters }) => {
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef();
 
-  // Close dropdown when clicking outside
   useEffect(() => {
     const handleClickOutside = (e) => {
       if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
@@ -48,14 +47,16 @@ const FilterComponent = ({ filters = { sector: "All", location: "All" }, setFilt
 
       {isOpen && (
         <div className="absolute top-full mt-2 bg-white shadow-lg rounded-lg p-3 w-64 flex flex-col space-y-3 z-10">
-          {/* Sector */}
           <div>
             <label className="font-semibold text-gray-700">Sector</label>
             <select
               className="w-full mt-1 p-2 border rounded-md"
               value={filters.sector}
               onChange={(e) =>
-                setFilters((prev) => ({ ...prev, sector: e.target.value }))
+                setFilters((prev) => ({
+                  ...prev,
+                  sector: e.target.value,
+                }))
               }
             >
               {sectors.map((s) => (
@@ -66,14 +67,16 @@ const FilterComponent = ({ filters = { sector: "All", location: "All" }, setFilt
             </select>
           </div>
 
-          {/* Location */}
           <div>
             <label className="font-semibold text-gray-700">Location</label>
             <select
               className="w-full mt-1 p-2 border rounded-md"
               value={filters.location}
               onChange={(e) =>
-                setFilters((prev) => ({ ...prev, location: e.target.value }))
+                setFilters((prev) => ({
+                  ...prev,
+                  location: e.target.value,
+                }))
               }
             >
               {locations.map((loc) => (
@@ -84,9 +87,10 @@ const FilterComponent = ({ filters = { sector: "All", location: "All" }, setFilt
             </select>
           </div>
 
-          {/* Reset button */}
           <button
-            onClick={() => setFilters({ sector: "All", location: "All" })}
+            onClick={() =>
+              setFilters({ sector: "All", location: "All" })
+            }
             className="bg-gray-200 text-gray-700 py-2 rounded-md hover:bg-gray-300 transition-colors"
           >
             Reset Filters
